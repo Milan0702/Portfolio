@@ -1,0 +1,443 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme - Soft Blue/Beige Palette */
+    --background-color: #f1f0e8; /* Cream background */
+    --primary-bg: #f1f0e8; /* Cream primary background */
+    --secondary-bg: #e5e1da; /* Light beige secondary background */
+    --primary: #89a8b2; /* Blue-grey primary */
+    --primary-light: #b3c8cf; /* Lighter blue-grey */
+    --primary-dark: #6a8691; /* Darker blue-grey */
+    --primary-rgb: 137, 168, 178; /* RGB values of the primary color for rgba usage */
+    --accent: #b3c8cf; /* Light blue-grey accent */
+    --text-color: #333333;
+    --text-color-light: #666666;
+    --card-bg: #ffffff;
+    --card-border: rgba(0, 0, 0, 0.05);
+    --secondary: #b3c8cf; /* Secondary color */
+    --secondary-rgb: 179, 200, 207; /* RGB values for secondary */
+    --button-bg: #89a8b2;
+    --button-text: #ffffff;
+    --input-bg: #f7f7f5;
+    --input-border: #e5e1da;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased scroll-smooth;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* Dark mode overrides - Dark Blue/Yellow Palette */
+  .dark {
+    --background-color: #021526; /* Dark navy background */
+    --primary-bg: #021526; /* Dark navy primary background */
+    --secondary-bg: #03346e; /* Deep blue secondary background */
+    --primary: #6eacda; /* Bright blue primary */
+    --primary-light: #8bbfe5; /* Lighter bright blue */
+    --primary-dark: #4d8bbc; /* Darker bright blue */
+    --primary-rgb: 110, 172, 218; /* RGB values for primary */
+    --accent: #e2e2b6; /* Light yellow accent */
+    --text-color: #ffffff;
+    --text-color-light: #e2e2b6;
+    --card-bg: #03346e;
+    --card-border: rgba(255, 255, 255, 0.05);
+    --secondary: #e2e2b6; /* Secondary color - light yellow */
+    --input-bg: #032a56;
+    --input-border: #054080;
+    --secondary-rgb: 226, 226, 182; /* RGB values for secondary */
+    --button-bg: #6eacda;
+    --button-text: #021526;
+  }
+  
+  .highlight-text {
+    @apply bg-opacity-15 px-1 py-0.5 rounded;
+    background-color: var(--primary);
+    color: var(--text-color);
+  }
+  
+  .dark .highlight-text {
+    @apply bg-opacity-15 px-1 py-0.5 rounded;
+    background-color: var(--primary);
+    color: var(--text-color);
+  }
+  
+  /* Make all section headings consistent */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+  }
+  
+  /* Improved focus visible for accessibility */
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+  
+  /* Card styling */
+  .custom-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--primary);
+    color: var(--button-text);
+    transform: translateY(-2px);
+  }
+  
+  /* Input styling */
+  .form-input {
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .form-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.2);
+    outline: none;
+  }
+  
+  .form-input::placeholder {
+    color: var(--text-color-light);
+    opacity: 0.7;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-500;
+  }
+  
+  /* Section styling */
+  section {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Hanging skill cards */
+.skill-cards-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  padding: 30px 0;
+}
+
+.skill-cards-row {
+  position: relative;
+  display: flex;
+  padding: 10px 0;
+  gap: 36px;
+  width: max-content;
+}
+
+/* Animation for the horizontal scrolling */
+@keyframes scrollX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-right {
+  animation: scrollX 40s linear infinite;
+}
+
+.scroll-left {
+  animation: scrollX 40s linear infinite reverse;
+}
+
+/* Add hanging effect with tilt and string and shake animation */
+@keyframes cardShake {
+  0% {
+    transform: rotateX(5deg) rotateY(0deg) rotate(-1deg);
+  }
+  50% {
+    transform: rotateX(5deg) rotateY(0deg) rotate(1deg);
+  }
+  100% {
+    transform: rotateX(5deg) rotateY(0deg) rotate(-1deg);
+  }
+}
+
+.skill-card {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cardShake 4s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  width: 2px;
+  height: 40px;
+  background-color: var(--primary);
+  transform-origin: top;
+  transform: translateX(-50%);
+}
+
+.skill-card:hover {
+  transform: rotateX(0deg) rotateY(0deg) translateY(-10px);
+  animation: none; /* Stop animation on hover */
+}
+
+.skill-card:hover::before {
+  height: 50px;
+}
+
+/* Pause animation on row hover */
+.skill-cards-row:hover {
+  animation-play-state: paused;
+}
+
+/* Section transition animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(var(--primary-rgb), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+/* Heading animations */
+.heading-animate {
+  position: relative;
+  display: inline-block;
+}
+
+.heading-animate::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--primary);
+  transition: width 0.8s ease-in-out;
+}
+
+.heading-animate.active::after,
+.heading-animate:hover::after {
+  width: 100%;
+}
+
+/* Text highlight animation */
+.text-highlight {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+  display: inline-block;
+}
+
+/* Page scroll animations */
+@keyframes pageTransition {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.6s ease-out forwards;
+}
+
+/* Animation delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Add page scroll transition */
+.page-transition {
+  transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.section-transition-active {
+  transform: translateY(-100vh);
+}
