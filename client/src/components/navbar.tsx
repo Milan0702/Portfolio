@@ -70,7 +70,8 @@ export function Navbar() {
             ))}
             <ThemeToggle />
           </div>
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center space-x-3">
+            <ThemeToggle size="lg" />
             <button
               onClick={toggleMobileMenu}
               className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition duration-300"
