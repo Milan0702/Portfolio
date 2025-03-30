@@ -56,10 +56,10 @@ export function Skills() {
     <section id="skills" ref={sectionRef} className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden transition-colors duration-300" style={{ backgroundColor: 'var(--secondary-bg)' }}>
       <div className="max-w-7xl mx-auto">
         <ScrollReveal direction="up" className="text-center mb-6">
-          <p className="text-lg uppercase tracking-widest font-medium mb-2 text-highlight">WHAT I DO</p>
+          <p className="text-lg uppercase tracking-widest font-medium mb-2 mr-2 text-highlight">the</p>
           <h2 ref={headingRef} className="heading-animate text-4xl md:text-6xl font-bold mb-8">
-            <span className="text-highlight">SKILLS</span>
-          </h2>
+            <span className="text-highlight"> Skills</span>
+          </h2><p className="text-lg uppercase tracking-widest font-medium mb-2 ml-2 text-highlight">behind the magic</p>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 animate-fade-in-up opacity-0" style={{ animationDelay: "300ms" }}>
             I enjoy creating beautiful, intuitive, and performant web applications with cutting-edge technologies.
           </p>
