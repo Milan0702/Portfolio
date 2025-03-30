@@ -423,7 +423,7 @@ const data = {
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/",
+      url: "www.linkedin.com/in/milan-bhimani-41a657282",
       icon: "fab fa-linkedin-in",
     },
   ],
