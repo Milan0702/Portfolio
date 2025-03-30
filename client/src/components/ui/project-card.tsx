@@ -42,7 +42,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
   
   return (
     <div className={cn(
-      "project-card group custom-card overflow-hidden transform hover:-translate-y-2 transition duration-300",
+      "project-card group custom-card overflow-hidden transform hover:-translate-y-2 transition duration-300 bg-white dark:bg-gray-800 shadow-lg rounded-lg h-[450px] flex flex-col",
       className
     )}>
       <div className="relative overflow-hidden h-48">
@@ -78,10 +78,10 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           </div>
         </div>
       </div>
-      <div className="p-5">
+      <div className="p-5 flex-grow flex flex-col">
         <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
+        <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">{description}</p>
+        <div className="flex flex-wrap gap-2 mt-auto">
           {technologies.map((tech, index) => (
             <span 
               key={index} 

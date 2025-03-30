@@ -6,7 +6,7 @@ export function Hero() {
   const { name, title, intro, resumeUrl, socials } = data;
   const [typedText, setTypedText] = useState("");
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const textOptions = ["Websites", "Web Apps", "UX Interfaces", "Mobile Apps"];
+  const textOptions = ["Websites", "Web Apps", "UI/UX Interfaces"];
   const [isTyping, setIsTyping] = useState(true);
   
   // Typing animation effect

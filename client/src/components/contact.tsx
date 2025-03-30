@@ -142,7 +142,7 @@ export function Contact() {
   
   return (
     <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-300" style={{ backgroundColor: 'var(--secondary-bg)' }}>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto ">
         <ScrollReveal direction="up" className="text-center mb-12">
           <h2 ref={headingRef} className="heading-animate text-3xl md:text-4xl font-bold mb-4">
             Get in <span className="text-highlight">Touch</span>
@@ -164,7 +164,7 @@ export function Contact() {
             
             <form ref={formRef} id="contact-form" className="space-y-6" onSubmit={handleSubmit}>
               
-              <div className="animate-fade-in-up opacity-0" style={{ animationDelay: "400ms" }}>
+              <div className="animate-fade-in-up opacity-0 " style={{ animationDelay: "400ms" }}>
                 <label htmlFor="name" className="block text-sm font-medium mb-1" style={{ color: 'var(--text-color)' }}>Your Name</label>
                 <input 
                   type="text" 

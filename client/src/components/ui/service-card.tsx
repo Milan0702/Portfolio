@@ -95,7 +95,7 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
     <div 
       ref={cardRef}
       className={cn(
-        "bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border-2 border-transparent transition-all duration-500 cursor-pointer group hover:border-primary relative overflow-hidden",
+        "bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border-2 border-transparent transition-all duration-500 cursor-pointer group hover:border-primary relative overflow-hidden h-[450px] flex flex-col",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"
       )}
       style={{ transitionDelay: animationDelay }}
@@ -107,11 +107,11 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
         <h3 className="text-xl md:text-2xl font-bold">{service.title}</h3>
       </div>
       
-      <p className="text-gray-600 dark:text-gray-300 mb-4 text-base">
+      <p className="text-gray-600 dark:text-gray-300 mb-4 text-base flex-grow">
         {service.description}
       </p>
       
-      <div className="mt-6">
+      <div className="mt-auto">
         <h4 className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wider font-medium mb-3">
           Technologies
         </h4>

@@ -8,11 +8,53 @@ const categories = ["All", ...Array.from(new Set(data.projects.map(project => pr
 
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [showAllProjects, setShowAllProjects] = useState(false);
   const headingRef = useRef<HTMLHeadingElement>(null);
   
   const filteredProjects = selectedCategory === "All" 
     ? data.projects 
     : data.projects.filter(project => project.category === selectedCategory);
+    
+  // Determine how many projects to show initially (2 rows: 6 on desktop, 4 on tablet, 2 on mobile)
+  const initialProjectsToShow = 6; // 3 columns x 2 rows on desktop
+  
+  // Projects to display based on whether we're showing all or just initial set
+  const displayedProjects = showAllProjects 
+    ? filteredProjects 
+    : filteredProjects.slice(0, initialProjectsToShow);
+    
+  // Check if we need to show the "View All" button
+  const hasMoreProjects = filteredProjects.length > initialProjectsToShow;
+  
+  const handleViewAllClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setShowAllProjects(true);
+    
+    // Smooth scroll to show newly displayed projects
+    setTimeout(() => {
+      const projectsSection = document.getElementById('projects');
+      const currentScrollPosition = window.scrollY;
+      const offset = 200; // Scroll a bit further down to show new content
+      
+      if (projectsSection) {
+        window.scrollTo({
+          top: currentScrollPosition + offset,
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
+  };
+  
+  const handleViewLessClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setShowAllProjects(false);
+    
+    // Scroll back to the projects section
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   useEffect(() => {
     const headings = document.querySelectorAll('.heading-animate');
@@ -35,6 +77,11 @@ export function Projects() {
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  // Reset showAllProjects when category changes
+  useEffect(() => {
+    setShowAllProjects(false);
+  }, [selectedCategory]);
   
   return (
     <section id="projects" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-300" style={{ backgroundColor: 'var(--secondary-bg)' }}>
@@ -67,7 +114,7 @@ export function Projects() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <div 
               key={project.id} 
               className="animate-fade-in-up opacity-0" 
@@ -78,14 +125,26 @@ export function Projects() {
           ))}
         </div>
         
-        <div className="text-center mt-10 animate-fade-in-up opacity-0" style={{ animationDelay: "800ms" }}>
-          <a 
-            href="#" 
-            className="inline-block px-6 py-3 bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition duration-300 shadow-md hover:shadow-lg"
-          >
-            View All Projects
-            <i className="fas fa-arrow-right ml-2"></i>
-          </a>
+        <div className="text-center mt-10 animate-fade-in-up opacity-0 " style={{ animationDelay: "800ms" }}>
+          {hasMoreProjects && !showAllProjects ? (
+            <button 
+              onClick={handleViewAllClick}
+              className="inline-block px-6 py-3 dark:bg-gray-800 hover:bg-primary-dark text-white font-medium rounded-lg transition duration-300 shadow-md hover:shadow-lg"
+            >
+              View All Projects
+              <i className="fas fa-arrow-right ml-2"></i>
+            </button>
+          ) : (
+            showAllProjects && (
+              <button 
+                onClick={handleViewLessClick}
+                className="inline-block px-6 py-3 dark:bg-gray-800  hover:bg-secondary-dark text-white font-medium rounded-lg transition duration-300 shadow-md hover:shadow-lg"
+              >
+                View Less
+                <i className="fas fa-arrow-up ml-2"></i>
+              </button>
+            )
+          )}
         </div>
       </div>
     </section>

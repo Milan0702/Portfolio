@@ -290,10 +290,22 @@ const data = {
         "A full-fledged product catalog and inquiry system for an industrial supplier with dynamic listings, customer inquiry system, and admin panel for product management.",
       image:
         "https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      category: "Web Apps",
+      category: "Web Development",
       technologies: ["Next.js", "Tailwind CSS", "Express.js"],
       liveUrl: "https://jmshahandco.com/",
-      githubUrl: "#",
+      githubUrl: "",
+    },
+    {
+      id: 1,
+      title: "HEALTHCONNECT -Health Care Portal",
+      description:
+        "A health care portal with a user-friendly interface and responsive design. It is a platform for patients to book appointments with doctors, view their medical records, and communicate with their healthcare providers.",
+      image:
+        "https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      category: "Web Development",
+      technologies: ["Next.js", "Tailwind CSS", "Express.js"],
+      liveUrl: "",
+      githubUrl: "",
     },
     {
       id: 2,
@@ -302,22 +314,22 @@ const data = {
         "A MERN stack-based educational platform providing study materials, quizzes, and video courses with secure user authentication and role-based access.",
       image:
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      category: "Web Apps",
+      category: "Web Development",
       technologies: ["MongoDB", "Express.js", "React", "Node.js"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "",
+      githubUrl: "",
     },
     {
       id: 3,
-      title: "Crowdfunding Website",
+      title: "Team Trees - Crowdfunding Website",
       description:
         "A MERN-based fundraising platform supporting environmental initiatives with real-time donation tracking, donor leaderboard, and educational content.",
       image:
         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      category: "Web Apps",
+      category: "Web Development",
       technologies: ["MongoDB", "Express.js", "React", "Node.js"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "",
+      githubUrl: "https://github.com/Milan0702/TeamTrees",
     },
     {
       id: 4,
@@ -328,8 +340,44 @@ const data = {
         "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
       category: "Data Science",
       technologies: ["Python", "scikit-learn", "Data Analysis"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "",
+      githubUrl: "https://github.com/Milan0702/Rent-House-Prediction",
+    },
+    {
+      id: 5,
+      title: "Tourism Webiste",
+      description:
+        "A tourism website providing information about tourist places in India with a user-friendly interface and responsive design.",
+      image:
+        "https://images.unsplash.com/photo-1703549068359-49d854524ddd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      category: "Web Development",
+      technologies: ["HTML","CSS"],
+      liveUrl: "",
+      githubUrl: "https://github.com/Milan0702/Tourism-Website",
+    },
+    {
+      id: 6,
+      title: "Library Management System",
+      description:
+        "A library management system with a user-friendly interface and responsive design.",
+      image:
+        "https://images.unsplash.com/photo-1688110395685-ce24e1949bca?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      category: "Python",
+      technologies: ["Python","tkinter","sqlite3"],
+      liveUrl: "",
+      githubUrl: "https://github.com/Milan0702/Library_management_system",
+    },
+    {
+      id: 7,
+      title: "File Manager",
+      description:
+        "A file manager with a user-friendly interface.",
+      image:
+        "https://images.unsplash.com/photo-1655432370508-d97cdbe14328?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29tcHV0ZXIlMjBmaWxlJTIwZXhwbG9yZXJ8ZW58MHx8MHx8fDI%3D",
+      category: "Python",
+      technologies: ["Python","tkinter","easygui","os"],
+      liveUrl: "",
+      githubUrl: "https://github.com/Milan0702/FileManager",
     },
   ],
   experiences: [

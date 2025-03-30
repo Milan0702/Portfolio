@@ -7,7 +7,7 @@ interface SkillCardProps {
 
 export function SkillCardComponent({ skill }: SkillCardProps) {
   return (
-    <div className="skill-card flex flex-col p-6 rounded-lg min-w-[260px] max-w-[300px] h-[280px] shadow-lg transform transition-transform hover:-translate-y-2 hover:shadow-xl"
+    <div className="skill-card flex flex-col p-6 rounded-lg min-w-[260px] max-w-[300px] h-[450px] shadow-lg transform transition-transform hover:-translate-y-2 hover:shadow-xl"
       style={{ 
         backgroundColor: 'var(--card-bg)',
         border: '1px solid var(--card-border)',
