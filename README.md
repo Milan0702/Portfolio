@@ -76,29 +76,6 @@ This is a modern, responsive portfolio website built to showcase my skills, proj
 
 5. Open `http://localhost:5000` in your browser
 
-## 📦 Deployment
-
-The portfolio website can be easily deployed to platforms like Vercel, Netlify, or GitHub Pages.
-
-### Deploying to Vercel (Recommended)
-
-1. Push your code to a GitHub repository
-2. Visit [Vercel](https://vercel.com) and sign up/login
-3. Click on "New Project" and import your GitHub repository
-4. Configure the project settings:
-   - Framework Preset: React
-   - Build Command: `npm run build`
-   - Output Directory: `dist/public`
-5. Add your environment variables
-6. Click "Deploy"
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/portfolio-website/issues).
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 
