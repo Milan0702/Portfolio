@@ -104,8 +104,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Milan Bhimani - [milanbhimani0001@gmail.com](mailto:milanbhimani0001@gmail.com)
 
-GitHub: [@your-github-username](https://github.com/yourusername)  
-LinkedIn: [Milan Bhimani](https://www.linkedin.com/in/your-linkedin-username/)
+GitHub: [@your-github-username](https://github.com/Milan0702/)  
+LinkedIn: [Milan Bhimani](www.linkedin.com/in/milan-bhimani-41a657282)
 
 ---
 
