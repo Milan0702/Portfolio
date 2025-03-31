@@ -296,7 +296,19 @@ const data = {
       githubUrl: "",
     },
     {
-      id: 1,
+      id: 2,
+      title: "EDUZONE - Educational Resources Platform",
+      description:
+        "A MERN stack-based educational platform providing study materials, quizzes, and video courses with secure user authentication and role-based access.",
+      image:
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      category: "Web Development",
+      technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+      liveUrl: "https://eduzone-nu.vercel.app/",
+      githubUrl: "https://github.com/Milan0702/Eduzone",
+    },
+    {
+      id: 3,
       title: "HEALTHCONNECT -Health Care Portal",
       description:
         "A health care portal with a user-friendly interface and responsive design. It is a platform for patients to book appointments with doctors, view their medical records, and communicate with their healthcare providers.",
@@ -308,19 +320,7 @@ const data = {
       githubUrl: "",
     },
     {
-      id: 2,
-      title: "EDUZONE - Educational Resources Platform",
-      description:
-        "A MERN stack-based educational platform providing study materials, quizzes, and video courses with secure user authentication and role-based access.",
-      image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      category: "Web Development",
-      technologies: ["MongoDB", "Express.js", "React", "Node.js"],
-      liveUrl: "",
-      githubUrl: "",
-    },
-    {
-      id: 3,
+      id: 4,
       title: "Team Trees - Crowdfunding Website",
       description:
         "A MERN-based fundraising platform supporting environmental initiatives with real-time donation tracking, donor leaderboard, and educational content.",
@@ -328,11 +328,11 @@ const data = {
         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
       category: "Web Development",
       technologies: ["MongoDB", "Express.js", "React", "Node.js"],
-      liveUrl: "",
-      githubUrl: "https://github.com/Milan0702/TeamTrees",
+      liveUrl: "https://crowd-funding-website-frontend.vercel.app/",
+      githubUrl: "https://github.com/Milan0702/Crowdfunding-Website",
     },
     {
-      id: 4,
+      id: 5,
       title: "House Rent Prediction Model",
       description:
         "A machine learning model using Python to predict rental prices in Ahmedabad based on key housing attributes with data preprocessing and model optimization.",
@@ -344,7 +344,7 @@ const data = {
       githubUrl: "https://github.com/Milan0702/Rent-House-Prediction",
     },
     {
-      id: 5,
+      id: 6,
       title: "Tourism Webiste",
       description:
         "A tourism website providing information about tourist places in India with a user-friendly interface and responsive design.",
@@ -356,7 +356,7 @@ const data = {
       githubUrl: "https://github.com/Milan0702/Tourism-Website",
     },
     {
-      id: 6,
+      id: 7,
       title: "Library Management System",
       description:
         "A library management system with a user-friendly interface and responsive design.",
@@ -368,7 +368,7 @@ const data = {
       githubUrl: "https://github.com/Milan0702/Library_management_system",
     },
     {
-      id: 7,
+      id: 8,
       title: "File Manager",
       description:
         "A file manager with a user-friendly interface.",
