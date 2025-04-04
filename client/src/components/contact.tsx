@@ -240,9 +240,9 @@ export function Contact() {
                 backgroundColor: 'var(--card-bg)',
                 border: '1px solid var(--card-border)'
               }}>
-              <h3 className="heading-animate text-2xl font-bold mb-6" style={{ color: 'var(--text-color)' }}>Contact Information</h3>
+              <h3 className="heading-animate text-2xl font-bold mb-6 text-white">Contact Information</h3>
               
-              <p className="mb-4 text-sm" style={{ color: 'var(--text-color-light)' }}>
+              <p className="mb-4 text-sm text-white/80">
                 Fill out the contact form to send me a direct message. Messages are delivered straight to my inbox, and I'll respond to your email address as soon as possible.
               </p>
               
@@ -252,8 +252,8 @@ export function Contact() {
                     <i className="fas fa-envelope text-primary"></i>
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1" style={{ color: 'var(--text-color)' }}>Email</h4>
-                    <a href={`mailto:${contactInfo.email}`} className="hover:text-primary transition duration-300" style={{ color: 'var(--text-color-light)' }}>
+                    <h4 className="text-lg font-medium mb-1 text-white">Email</h4>
+                    <a href={`mailto:${contactInfo.email}`} className="text-white/80 hover:text-primary transition duration-300">
                       {contactInfo.email}
                     </a>
                   </div>
@@ -264,8 +264,8 @@ export function Contact() {
                     <i className="fas fa-phone text-primary"></i>
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1" style={{ color: 'var(--text-color)' }}>Phone</h4>
-                    <a href={`tel:${contactInfo.phone.replace(/\D/g, '')}`} className="hover:text-primary transition duration-300" style={{ color: 'var(--text-color-light)' }}>
+                    <h4 className="text-lg font-medium mb-1 text-white">Phone</h4>
+                    <a href={`tel:${contactInfo.phone.replace(/\D/g, '')}`} className="text-white/80 hover:text-primary transition duration-300">
                       {contactInfo.phone}
                     </a>
                   </div>
@@ -276,8 +276,8 @@ export function Contact() {
                     <i className="fas fa-map-marker-alt text-primary"></i>
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1" style={{ color: 'var(--text-color)' }}>Location</h4>
-                    <p style={{ color: 'var(--text-color-light)' }}>{contactInfo.location}</p>
+                    <h4 className="text-lg font-medium mb-1 text-white">Location</h4>
+                    <p className="text-white/80">{contactInfo.location}</p>
                   </div>
                 </div>
               </div>
@@ -307,18 +307,37 @@ export function Contact() {
               </div>
             </div>
             
-            <div className="custom-card shadow-lg overflow-hidden h-64 animate-fade-in-right opacity-0" 
+            <div className="custom-card shadow-lg overflow-hidden h-64 animate-fade-in-right opacity-0 relative group" 
               style={{ 
                 animationDelay: "800ms",
-                border: '1px solid var(--card-border)'
+                border: '1px solid var(--card-border)',
+                backgroundColor: 'var(--card-bg)',
+                backgroundImage: 'radial-gradient(circle at 50% 50%, var(--primary) 0%, transparent 50%)',
+                backgroundSize: '200% 200%',
+                backgroundPosition: '100% 100%',
+                transition: 'all 0.5s ease-in-out'
               }}>
-              <iframe 
-                className="w-full h-full" 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.25791517206!2d72.43965837419353!3d23.02037449357413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2sin!4v1743240533240!5m2!1sen!2sin" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Location Map"
-              ></iframe>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
+              <div className="relative h-full flex flex-col items-center justify-center text-center p-6 transform transition-transform duration-500 group-hover:scale-105">
+                <div className="mb-4 text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 animate-float" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  Let's Build Together
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                 Building innovative and scalable solutions—let's connect!
+
+
+                </p>
+                <div className="flex space-x-2">
+                  <span className="h-2 w-2 rounded-full bg-primary animate-ping"></span>
+                  <span className="h-2 w-2 rounded-full bg-secondary animate-ping" style={{ animationDelay: "0.2s" }}></span>
+                  <span className="h-2 w-2 rounded-full bg-primary animate-ping" style={{ animationDelay: "0.4s" }}></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

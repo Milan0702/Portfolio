@@ -101,7 +101,7 @@ const data = {
     stats: [
       {
         label: "Experience",
-        value: "6+ M  onths",
+        value: "6+ Months",
         icon: "fa-briefcase",
         color: "primary",
       },
