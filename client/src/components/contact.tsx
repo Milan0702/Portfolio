@@ -240,9 +240,9 @@ export function Contact() {
                 backgroundColor: 'var(--card-bg)',
                 border: '1px solid var(--card-border)'
               }}>
-              <h3 className="heading-animate text-2xl font-bold mb-6 text-white">Contact Information</h3>
+              <h3 className="heading-animate text-2xl font-bold mb-6" style={{ color: 'var(--text-color)' }}>Contact Information</h3>
               
-              <p className="mb-4 text-sm text-white/80">
+              <p className="mb-4 text-sm" style={{ color: 'var(--text-color-light)' }}>
                 Fill out the contact form to send me a direct message. Messages are delivered straight to my inbox, and I'll respond to your email address as soon as possible.
               </p>
               
@@ -252,8 +252,8 @@ export function Contact() {
                     <i className="fas fa-envelope text-primary"></i>
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1 text-white">Email</h4>
-                    <a href={`mailto:${contactInfo.email}`} className="text-white/80 hover:text-primary transition duration-300">
+                    <h4 className="text-lg font-medium mb-1" style={{ color: 'var(--text-color)' }}>Email</h4>
+                    <a href={`mailto:${contactInfo.email}`} className="hover:text-primary transition duration-300" style={{ color: 'var(--text-color-light)' }}>
                       {contactInfo.email}
                     </a>
                   </div>
@@ -264,8 +264,8 @@ export function Contact() {
                     <i className="fas fa-phone text-primary"></i>
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1 text-white">Phone</h4>
-                    <a href={`tel:${contactInfo.phone.replace(/\D/g, '')}`} className="text-white/80 hover:text-primary transition duration-300">
+                    <h4 className="text-lg font-medium mb-1" style={{ color: 'var(--text-color)' }}>Phone</h4>
+                    <a href={`tel:${contactInfo.phone.replace(/\D/g, '')}`} className="hover:text-primary transition duration-300" style={{ color: 'var(--text-color-light)' }}>
                       {contactInfo.phone}
                     </a>
                   </div>
@@ -276,8 +276,8 @@ export function Contact() {
                     <i className="fas fa-map-marker-alt text-primary"></i>
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1 text-white">Location</h4>
-                    <p className="text-white/80">{contactInfo.location}</p>
+                    <h4 className="text-lg font-medium mb-1" style={{ color: 'var(--text-color)' }}>Location</h4>
+                    <p style={{ color: 'var(--text-color-light)' }}>{contactInfo.location}</p>
                   </div>
                 </div>
               </div>
