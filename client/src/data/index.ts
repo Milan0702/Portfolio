@@ -466,7 +466,7 @@ const data = {
     },
   ],
   resumeUrl:
-    "https://drive.google.com/file/d/1tuw68a24SO4_VwDx2NYyZZppetLF-fdT/view?usp=sharing",
+    "https://drive.google.com/file/d/1vdjZnQVwJ8shGXCpkTgLCJSFq4Qp6vwr/view?usp=drive_link",
 };
 
 export default data;
