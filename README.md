@@ -1,6 +1,17 @@
 # Milan Bhimani - Portfolio Website
 
-![Portfolio Preview](https://i.imgur.com/wdoUoqt.png)
+<p align="center">
+  <a href="https://portfolio-milan-bhimanis-projects.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/LIVE%20SITE-Visit%20Portfolio-FF5757?style=for-the-badge" alt="Live Site" />
+  </a>
+</p>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+</div>
 
 ## 📌 Overview
 
