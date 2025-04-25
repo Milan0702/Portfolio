@@ -309,15 +309,15 @@ const data = {
     },
     {
       id: 3,
-      title: "HEALTHCONNECT -Health Care Portal",
+      title: "AI-powered Notes App",
       description:
-        "A health care portal with a user-friendly interface and responsive design. It is a platform for patients to book appointments with doctors, view their medical records, and communicate with their healthcare providers.",
+        "A web application that utilizes OpenAI's API to generate summaries of notes, enhancing productivity and learning efficiency.",
       image:
         "https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
       category: "Web Development",
-      technologies: ["Next.js", "Tailwind CSS", "Express.js"],
-      liveUrl: "",
-      githubUrl: "",
+      technologies: ["Next.js", "Tailwind CSS", "Supabase", "OpenAI API", "Oauth", "Reactquery"],
+      liveUrl: "https://ai-notes-summary-app.vercel.app/",
+      githubUrl: "https://github.com/Milan0702/AI-Notes-Summary-App",
     },
     {
       id: 4,
