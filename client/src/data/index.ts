@@ -289,7 +289,7 @@ const data = {
       description:
         "A full-fledged product catalog and inquiry system for an industrial supplier with dynamic listings, customer inquiry system, and admin panel for product management.",
       image:
-        "https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1474674556023-efef886fa147?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       category: "Web Development",
       technologies: ["Next.js", "Tailwind CSS", "Express.js"],
       liveUrl: "https://jmshahandco.com/",
